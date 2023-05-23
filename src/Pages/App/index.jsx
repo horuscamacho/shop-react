@@ -1,22 +1,15 @@
-import './App.css'
-import { Home } from '../Home'
-import {MyOrders} from "../MyOrders"
-import {SignIn} from "../SignIn/index.jsx";
-import {NotFound} from "../NotFound/index.jsx";
-import {MyOrder} from "../MyOrder/index.jsx";
-import {MyAccount} from "../MyAccount/index.jsx";
+import { BrowserRouter} from "react-router-dom";
+import { AppRoutes } from "../../Routes/index.jsx";
+import { NavBar } from "../../../src/Components/NavBar";
+import '../../App.css'
 
-function App() {
+const App = () => {
 
   return (
-      <h1 className="text-3xl font-bold underline">
-          <Home />
-          <MyOrders />
-          <SignIn />
-          <NotFound />
-          <MyOrder />
-          <MyAccount />
-      </h1>
+      <BrowserRouter>
+            <NavBar/>
+            <AppRoutes/>
+      </BrowserRouter>
   )
 }
 
